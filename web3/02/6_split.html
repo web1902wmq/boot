@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ulScores">
+        <li>78</li>
+        <li>82</li>
+        <li>65</li>
+        <li>90</li>
+    </ul>
+    <script>
+        //用id查找ul元素
+        var ul=document.getElementById("ulScores");
+        var html=ul.innerHTML;//获得ul元素的内容
+        console.log(html);
+        //先去掉开头的^\s*<li>
+        html=html.replace(/^\s*<li>/i,"");
+        //先去掉结尾的</li>\s*$
+        html=html.replace(/<\/li>\s*$/i,"");
+        //将html 按照</li>\s*<li>切割
+        var arr=html.split(/<\/li>\s*<li>/i);
+        console.log(arr);
+        //将arr中的分数按照降序排列
+        arr.sort(function(a,b){return b-a})
+        console.log(arr);
+        html=`<li>${//将arr,在拼接成需要的HTML片段：
+            arr.join("</li><li>")
+            }</li>`;
+        ul.innerHTML=html;
+    </script>
+</body>
+</html>

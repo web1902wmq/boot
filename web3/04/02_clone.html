@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var  lilei={
+         sname:"lilei",
+         sage:11
+     };
+     function clone(obj){//定义函数克隆一个对象
+        var newobj={}//先创建对象，新的对象地址
+        for (var key in obj){//遍历原对象中的每个属性
+        //每遍历一个属性，就要在新的对象中添加同名属性，值等于原对象中同名属性的值
+        newobj[key]=obj[key];  
+        //newobj.key=obj.key;
+        //newobj["key"]=obj["key"];
+         }
+         return newobj; 
+     }
+     var lilei2=clone(lilei);
+     lilei.gf="hmm";
+     lilei2.gf="fjj";
+     console.log(lilei);
+     console.log(lilei2);
+     console.log(lilei==lilei2);
+    </script>
+</body>
+</html>
+
+ 
+

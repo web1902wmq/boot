@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var str="老师:请用小红 我的 朋友造句。小亮：小红是我的朋友。小然：朋友！小红是我的！";
+      //str="no zuo no die;no can no bibi";
+      //查找字符串以小开头的人名
+      var arr=str.match(/小[\u4e00-\u9f5a]/g);
+      //null
+      console.log(arr);
+      console.log(`共找到 ${arr!==null?arr.length:0} 处`);
+    </script>
+</body>
+</html> 

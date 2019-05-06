@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        function fun(){
+            var gf;
+            //不小心并错变量名，不但不报错，反而走动在全局创建：误会+内存泄漏
+            qgf="今晚308，w84u";//严格模式下，报错
+            console.log(gf);//undefined
+        }
+        fun();
+        console.log(qgf);
+    </script>
+</body>
+</html>

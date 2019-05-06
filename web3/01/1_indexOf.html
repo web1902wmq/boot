@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  请用户输入一条消息
+        var msg=prompt("请输入消息内容");
+        //查找消息中的敏感词:我草
+        var i=msg.indexOf("我草");
+        if(i!==-1){
+        //如果找到
+        //输出：包含敏感词，禁止发送
+        alert("包含敏感词!禁止发送!");
+    }else{//否则假消息发到页面上
+        //当前网页写
+        document.write(`李然说：${msg}`);
+    }
+    </script>
+</body>
+</html>

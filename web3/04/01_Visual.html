@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建学生对象
+        //姓名：li lei 
+        //年龄：14
+        //自我介绍：说:i'm li lei ,i'm  11
+        var lilei={
+            sname:"lilei",
+            sage:11,
+            intr:function(){//功能 方法
+                console.log(`I'm ${lilei.sname},I'm ${lilei.sage}
+                `);
+            }
+        }  
+        lilei.intr();//请lilei做自我介绍
+        //local:关键词 this->lilei
+        lilei.sage++;//过了一年，李磊张了一岁
+        console.log(lilei);
+        lilei.intr();//在请李磊做自我介绍
+          //local:关键词 this->lilei
+        var intr=lilei.intr;//没加（）就是“给”，不是调用
+        /*intr:function(){//功能 方法
+                console.log(`I'm ${this.sname},I'm ${this.sage}`);*/
+        intr();//=>window.intr()
+        //local:this->window
+        function fun(){
+            console.log(this);
+        }
+        fun();//this->window
+        lilei.fun=fun;//将全局的fun给了lilei的fun属性
+        lilei.fun();//this->lilei
+    </script>
+</body>
+</html>

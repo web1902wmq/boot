@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var father={
+            bal:10000000000,
+            car:"infiniti"
+        }
+        var hmm=Object.create(father,{
+            //defineProperties
+            //属性名:{value:开关...}
+            bao:{
+                value:"LV",
+                
+                writable:true,
+                enumerable:true,
+                configurable:false
+            },
+            phone:{
+                value:"iponexxx",
+                writable:true,
+                enumerable:true,
+                configurable:false
+            }
+        });
+       //2件事
+       //1. cerate()创建新对象
+       //  vs new 沟造函数
+       //2.让新对象继承father,类似于new的第二步
+       console.log(hmm);
+       //{}.__proto__->father
+       console.log(hmm.bal);
+       console.log(hmm.car);
+    </script>
+</body>
+</html>

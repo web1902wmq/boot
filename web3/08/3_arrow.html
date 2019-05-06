@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var arr=[12,3,123,23,1,2];
+//arr.sort(function(a,b){return a-b});
+arr.sort((a,b)=>a-b);
+console.log(arr);//1,2,3,12,23,123
+
+var n=1;
+//setInterval(function(){
+//  console.log(n++);
+//},1000);
+setInterval(()=>{console.log(n++)},1000);
+var str="you can you up";
+//str=str.replace(/\b[a-z]/g,function(kw){
+//  return kw.toUpperCase();
+//});
+str=str.replace(/\b[a-z]/g,kw=>kw.toUpperCase());
+console.log(str);//You Can You Up
+
+
+var names=["亮亮","然然","东东"];
+//names.forEach(function(elem){
+ // console.log(elem+" - 到")
+//});
+names.forEach(elem=>console.log(elem+" - 到"));
+var nums=[1,2,3,4,5];
+//var evens=nums.map(function(elem){
+  //return elem*2;
+//})
+var evens=nums.map(elem=>elem*2);
+console.log(nums);//1,2,3,4,5
+console.log(evens);//2,4,6,8,10
+
+(function(){
+  var t=new Date();
+  console.log("主程序执行完毕，at:"+t.toLocaleTimeString());
+})()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //全局作用域，定义两个全局变量
+        var shop="公园的商店";
+        var bread="公园商店里卖的面包";
+        function myFamily(){
+            //函数作用域中定义一个局部变量
+            var bread="自家的面包";
+            console.log(`吃 ${bread}`);
+            console.log(`去 ${shop} 买好吃的`);
+        }
+        myFamily();
+    </script>
+</body>
+</html>

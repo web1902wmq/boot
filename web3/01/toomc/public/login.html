@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+   	 *{margin:0;padding:0;box-sizing:border-box;}
+	 body{
+		background-color:#f5f6fa;
+	 }
+	 
+	 .logo{
+		float:left;
+	 }
+	 .a1_box{width:100%;background:#ffffff;}
+     #a1{
+	  width:1200px;
+	  height:70px;
+	  margin:0 auto;
+	 }
+	 #a1::after{
+		content:"";
+		display:block;
+		clear:both;
+	 }
+	 .logo{
+		float:left;
+		height:70px;
+	 }
+	 .logo>img{
+		height:47px;
+		margin-top:11.5px;
+	 }
+	 #d1{
+		float:left;
+		width:800px;
+		height:70px;
+		line-height:70px;
+	 }
+	 #d1>ul{
+		width:100%;
+		display:flex;
+		list-style:none;
+		justify-content:space-around;
+		text-align:center;
+	 }
+	 #d3{
+		float:right;
+		height:70px;
+		line-height:70px;
+		
+	 }
+	 #d3>div{
+		float:left;
+	 }
+	 #d3>div:nth-child(1){
+		margin-top:13px;
+		margin-right:20px;
+	 }
+	 .denglu_box{
+		width:400px;
+		border-radius:10px;
+		margin:0 auto;
+		margin-top:70px;
+		margin-bottom:70px;
+		padding:15px 30px 30px;
+		background:#ffffff;
+		text-align:center;
+	 }
+	 .deng_title{
+		padding: 20px 0 30px 0;
+		font-size: 20px;
+	 }
+	 input{
+		width:340px;
+		height:40px;
+		padding: 0 10px;
+		margin-bottom:18px;
+	 }
+	 .deng_btn{
+		width:340px;
+		height:40px;
+		line-height:40px;
+		margin-bottom:20px;
+		background:#4b95ff;
+		color:#ffffff;
+		font-size:14px;
+	 }
+	 .deng_wz{
+		text-align:right;
+		font-size:10px;
+		color:#aaa;
+	 }
+	 .footer_box{
+		width:100%;
+		height:240px;
+		background:#282c30;
+	 }
+	.all_box{
+		width:1200px;
+		margin: 0 auto;
+		padding-top:66px;
+		padding-bottom:30px;
+		border-bottom:1px solid #3d3e3f;
+	}
+	.all_box::after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.msg_box{
+		float:left;
+	}
+	.msg_items{
+		list-style:none;
+		width:400px;
+		padding-bottom:15px;
+		display:flex;
+		justify-content:space-between;
+		color:#999;
+	}
+	.msg_items>li{
+		width:100px;
+		height:16px;
+		line-height:16px;
+		font-size:16px;
+		text-align:center;
+
+	}
+	.msg_items>li:not(:last-child){
+		border-right:1px solid #999;
+	}
+	.msg_text{
+		color:#666;
+	}
+	.erwei_box{
+		float:right;
+		color:#666;
+	}
+	.erwei_box:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.fl{
+		float:left;
+	}
+	.erwei_img>img{width:75px;margin-top:-20px;margin-left:10px;}
+  </style>
+ </head>
+ <body>
+   <div class="body_box">
+	 <div class="a1_box">
+	   <div id="a1">
+			<div class="logo">
+				<img src="play-logo-ccj.png" alt="">
+			</div>
+			<div id="d1">
+			 <ul>
+			  <li>首页</li>
+			  <li>免费课</li>
+			  <li>直播课</li>
+			  <li>会员课</li>
+			  <li>培优课</li>
+			  <li>线上班（VIP）</li>
+			  <li>线下班</li>
+			  <li>最新活动</li>
+			 </ul>
+			</div>
+			<div id="d3">
+				<div>
+					<img src="search.png" alt="">
+				</div>
+				<div>
+					<a>登录</a>
+					<span>|</span>
+					<a>注册</a>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="denglu_box">
+			<div class="deng_title">登录</div>
+			<div class="deng_inputs">
+				<input type="text" placeholder="邮箱或手机号" id='phone'>
+				<input type="password" placeholder="密码" id='upwd'>
+				<button class="deng_btn" onclick="login()">登录</button>
+			</div>
+			<div class="deng_wz">
+				<span>忘记密码<span>				
+				<span>|<span>
+				<span>注册<span>
+			</div>
+	  </div>
+	  <footer class="footer_box">
+			<div class="all_box">
+				<div class="msg_box">
+					<ul class="msg_items">
+						<li>关于我们</li>					
+						<li>招聘信息</li>
+						<li>联系我们</li>
+						<li>商务合作</li>
+					</ul>
+					<p class="msg_text">Copyright © 达内科技有限公司版权所有 京ICP备12003709号-2</p>
+				</div>
+				<div class="erwei_box">
+					<div class="erwei_msg fl">
+						<p>达内精品在线WWW.TMOOC.CN 专注于IT职业技能培训 </p>
+						<p>涵盖20余门课程体系，致力于打造最权威的IT职业教育学习平台</p>
+					</div>
+					<div class="erwei_img fl">
+						<img src="erweima.jpg">
+					</div>
+				</div>
+			<div>
+			
+	  </footer>
+   </div>
+ </body>
+ 	 <script>
+		 function login(){
+			 	//创建对象
+			 var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+			 if(xhr.readyState==4&&xhr.status==200){
+			  var result=xhr.responseText;
+          console.log(result);//路由要验证：p1.innerHTML=result;
+				}
+		  }
+		 xhr.open("post","/user/login",true);
+		 
+		 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		  
+   var formdata="phone="+phone.value+"&upwd="+upwd.value;
+		 
+		 xhr.send(formdata);
+		  
+		 }
+ 	 </script>
+
+</html>

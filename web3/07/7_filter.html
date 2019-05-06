@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,5];
+        var evens=arr.filter(
+            //先创建空数组等着接符合条件的元素
+            //var subArr=[]
+            //filter会拿着回调函数股去每个元素上判断一次
+            function(elem){
+            //只要当前元素是偶数
+            return elem%2==0;//就放入新数组
+        }
+        //如果当前元素判断结果为true，就追加到新数组
+        //
+        //if(return true) subArr.push(elem)
+        //遍历结束，返回subArr
+        )
+        console.log(arr);
+        console.log(evens);
+    </script>
+</body>
+</html>

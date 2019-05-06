@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function Student(sname,sage){
+        this.sname=sname;
+        this.sage=sage;
+    }//prototype->{}
+//为Student的老公添加toString方法
+    Student.prototype.toString=function(){
+        return `{sname:"${this.sname}",sage:${this.sage}}`
+    }
+    var lilei=new Student("Li Lei",11);
+    console.log(lilei.toString());
+    var arr=[1,2,3];
+    console.log(arr.toString());
+    var now=new Date();
+    console.log(now.toString());
+    </script>
+</body>
+</html>

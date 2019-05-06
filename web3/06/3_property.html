@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+          var eric={
+            eid:1001,//只读
+            ename:"埃里克",
+           
+        }
+        //1.先定义一个隐性埋名的半隐藏的数据属性，实际存储属性值
+        Object.defineProperty(eric,"_eage",{
+            value:25,//实际存储属性值
+            writable:true,
+            enumerable:false,//半隐藏
+            configurable:false
+        })
+        //定义保镖用正式的属性名代替受保护的属性抛头露面
+        Object.defineProperty(eric,"eage",{
+            //第一个保镖：帮用户去属性中取值
+            get:function(){
+                console.log("自动调用get")
+                return this._eage
+        },
+        //第二个保镖：帮用户新值送入属性中，但是会。
+        set:function(value){//value自动接到新值
+            console.log(`自动调用set方法，并自动传入${value}`);
+            //先验证新值是否符合规定
+            if(value>=18&&value<=65){
+                //将新值放回受保护的属性中
+                this._eage=value;
+            }else{//如果新值不符合规定，则不保存直接报错
+                throw Error("年龄操范围！")
+            }
+        },
+        enumerable:true,//代替受保护的属性抛头露面
+        configurable:false//不能删除保镖
+        })
+        //只要试图读取属性时
+        console.log(eric.eage);//自动调用eage中的get方法
+        //只要试图修改属性值时
+        eric.eage=26;//自动调用eage中的get方法
+        console.log(eric);
+        eric.eage=16;//错误返回
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               //liang(function(){...})
+        //         |
+    function liang(next){
+        console.log("亮起跑...");
+        setTimeout(function(){
+        console.log("亮到达终点！");
+            //亮跑完下一个函数才能开始
+            next();
+        },6000);
+    }
+        //ran(function(){...})
+        //        |
+    function ran(next){
+        console.log("然起跑...");
+        setTimeout(function(){
+        console.log("然到达终点！");
+        //然跑完，下一向任务才能开始
+        next();
+        },4000);
+    }
+            //ran(function(){...})
+        //        |
+        function dong(next){
+        console.log("东起跑...");
+        setTimeout(function(){
+        console.log("东到达终点！");
+        //东跑完，下一向任务才能开始
+        next();
+        },2000);
+    }
+    </script>
+</body>
+</html>

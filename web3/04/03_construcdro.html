@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   function Student(sname,sage){
+    //         属性  |   变量    
+            this.sname=sname;
+            this.sage=sage;
+            this.intr=function(){
+                console.log(`I'm ${this.sname},I'm ${this.sage}`);
+            }
+        }
+        //2.用new调用Student构造函数，创建一个学生对象  
+        
+      var lilei=new Student("Li Lei",11);
+      var hmm=new Student("Han Meimei",12);
+      console.log(lilei);
+      console.log(hmm);
+      lilei.intr();
+      hmm.intr();
+    </script>
+    
+    
+</body>
+</html>

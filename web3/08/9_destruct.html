@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.数组解构
+        var date=[2019,5,5];
+        var [y,m,d]=date;
+        console.log(y,m,d);
+        //对象解构
+        var user={
+            uid:1001,
+            uname:"dingding",
+            set:1,
+            signin:function(){
+                console.log("登录...");
+                },
+            signout:function(){
+                console.log("注销...");
+                },
+            signup:function(){
+                console.log("注册...");
+                }
+        }
+        //var {uid:uid,sigup:sigup}=user;
+        var {uid,signup}=user;
+        console.log(uid);
+        signup();
+    </script>    
+</body>
+</html>

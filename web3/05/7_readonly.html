@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        var eric={ eid:1001, ename:"埃里克"};
+        //ES5：关闭eric对象上eid属性中“可修改”开关
+        Object.defineProperty(eric,"eid",{
+            writable:false
+        });
+        eric.eid=1002;//严格模式下报错：eid是只读
+        console.log(eric);
+    </script>
+</body>
+</html>

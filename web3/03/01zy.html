@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function fun(){
+                var n=999;
+                nAdd=function(){n++};
+                return function(){
+                    console.log(n);
+                }
+            }
+            var getN=fun();
+            getN();
+           console.log(nAdd);
+            getN();
+    
+
+    
+            function fun(){
+      for(var i=0,arr=[]; i<3;i++){
+        arr[i]=function(){ console.log(i); }
+      }
+      return arr;
+    }
+    var funs=fun();
+    funs[0]();//?
+    funs[1]();//?
+    funs[2]();//?
+ 
+    </script>
+</body>
+</html>

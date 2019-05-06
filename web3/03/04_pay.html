@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pay(x){
+            //使用局部变量保存总钱数
+            var total=1000;
+            total-=x; 
+            console.log(`花了${x},还剩${total}`);
+        }
+        total=0;//外人无法篡改函数内的局部变量，但是会报错
+        pay(100);//正常执行
+        pay(100);
+    </script>
+</body>
+</html>

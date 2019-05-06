@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // class Plane{
+  //   constructor(fname,speed,score){
+  //     this.fname = fname,
+  //     this.speed = speed,
+  //     this.score = score
+  //   }
+  //   fly(){
+  //     console.log(`${this.fname}以时速${this.speed}飞行`)
+  //   }
+  //   getScore(){
+  //     console.log(`击落${this.fname}得${this.score}分`)
+  //   }
+  // } 
+  // class bee{
+  //   constructor(fname,speed,award){
+  //     this.fname = fname,
+  //     this.speed = speed,
+  //     this.award = award
+  //   }
+  //   fly(){
+  //     console.log(`${this.fname}以时速${this.speed}飞行`)
+  //   }
+  //   getAward(){
+  //     console.log(`击落${this.fname}，获得${this.award}`)
+  //   }
+  // }
+  class ert{
+    constructor(fname,speed){
+      this.fname = fname,
+      this.speed = speed
+    }
+    fly(){
+      console.log(`${this.fname}以时速${this.speed}飞行`)
+    }
+  }
+  class Plane extends ert{//extends ert让子类继承抽象父类型
+    constructor(fname,speed,score){
+      super(fname,speed),//调用父类型构造函数
+      this.score = score
+    }
+    getScore(){
+      console.log(`击落${this.fname}得${this.score}分`)
+    }
+  } 
+  class bee extends ert{//extends ert让子类继承抽象父类型
+    constructor(fname,speed,award){
+      super(fname,speed),//调用父类型构造函数
+      this.award = award
+    }
+    getAward(){
+      console.log(`击落${this.fname}，获得${this.award}`)
+    }
+  }
+  var F12 = new Plane('F12',12,5);
+  F12.fly();
+  F12.getScore();
+  console.log(F12);
+  var bee1 = new bee('bee1',12,'one live');
+  bee1.fly();
+  bee1.getAward();
+  console.log(bee1);  
+    </script>
+</body>
+</html>

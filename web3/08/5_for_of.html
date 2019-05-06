@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names=["亮亮","然然","东东"]
+        for(var name of names){//遍历索引数组
+        //of依次取出names数组中每个人名保存到前边的变量name中
+            console.log(name + " - 到！");
+        } 
+
+          var fbb=[];
+            fbb["math"]=91;
+            fbb["chs"]=69;
+            fbb["eng"]=95;
+            for(var key in fbb){//遍历关联数组
+                console.log(`${key} - ${fbb[key]}`);
+            }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var email="zhangdong@tedu.cn";
+    //按@切割
+    var arr=email.split("@");
+    //arr:["zhangdong""tedu.cn"];
+    //        0            1
+    var uname=arr[0];
+    var domain=arr[1];
+    console.log(uname);
+    console.log(domain);
+    //鄙视；翻转一个字符串
+    var str="helloworld";
+    //将字符串打散变为字符数组
+    var arr=str.split("");
+    //将数组arr的瞬时值转为字符串，永久保留，不随数组该变而改变-拍照
+    console.log(String(arr));
+    console.log("开始翻转")
+    //翻转字符串
+    arr.reverse();
+    console.log("翻转后")
+    console.log(String(arr));
+       //无缝拼接反转后的数组为字符串
+    str=arr.join("");
+    console.log(str);
+    //dlrowolleh
+</script>
+</body>
+</html>

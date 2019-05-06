@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             function Student(sname,sage){
+    //         属性  |   变量    
+            this.sname=sname;
+            this.sage=sage;
+          //够着函数中就不应该右刚发定义
+        }//prototype->{}
+        //为妈妈的老公强行添加一个intr方法
+       Student.prototype.intr=function(){
+                console.log(`I'm ${this.sname},I'm ${this.sage}`);
+            }
+        //2.用new创建:
+        var lilei=new Student("Li Lei",11);
+        //new的第二步
+        //告诉lilei，你爹是Student的老公
+        //lilei.__proto__=>Student.prototype
+     
+      var hmm=new Student("Han Meimei",12);
+          //new的第二步
+        //告诉hmm，你爹是Student的老公
+        //hmm.__proto__=>Student.prototype
+      console.log(lilei);
+      //lilei中没有intr；function()
+      console.log(hmm);
+          //hmm中没有intr；function()
+         //intr在那 ？lilei的爹中和hmm的爹中
+         //验证lilei的爹是不是hmm的爹
+         console.log(lilei.__proto__==hmm.__proto__);//true
+         //验证李磊的爹是不是Student的老公
+         console.log(lilei.__proto__==Student.prototype);//true
+         lilei.intr();
+         hmm.intr();
+    </script>
+</body>
+</html>

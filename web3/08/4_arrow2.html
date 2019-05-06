@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* var LiLei={
+            sname:"Li Lei",
+            friends:["tom","jerry","jack","rose"],
+            intr:function(){
+                //this:lilei
+                this.friends.forEach(
+                    function(name){//回调函数
+                       //不加bind 回调函数中的this->window
+                       console.log(`${this.sname} 认识 ${name}`);
+                }.bind(this)//加上bind才能将函数内部错误地this换成外部正确的this
+                )
+
+            }
+        }*/
+        var LiLei={//对象的{不是作用域！}
+            sname:"Li Lei",
+            friends:["tom","jerry","jack","rose"],
+            intr:function(){//这里的function不能改为箭头函数，一旦改为箭头函数，this->window
+                //this:lilei
+                this.friends.forEach(
+                   //this->lilei
+                     name=>console.log(`${this.sname} 认识 ${name}`)
+                
+                )
+            }
+        }
+        LiLei.intr();
+    </script>
+</body>
+</html>

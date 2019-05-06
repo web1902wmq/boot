@@ -1,0 +1,54 @@
+.my_header,.my_footer{
+    width:100%
+}
+/* ÷–¥√ΩÃÂ≤È—Ø*/
+@media screen and (min-width:992px){
+    .my_header{
+        height:12rem;
+    }
+    .my_footer{
+        height:21rem;
+    }
+}
+@media screen and (max-width:991px){
+    .my_header{
+        height:37rem;
+    }
+    .my_footer{
+        height:37rem;
+    }
+}
+.bg-img{
+    width:100%;
+    height: 540px;
+    position: relative;
+    background-image: url(../../images/nav-brandstory.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+.my_pc{
+    height:150px;
+    font-size:24px;
+}
+.my-wa{
+    width:320px;
+    height:100px;
+}
+.my-wia{
+    width:267px;
+    height:180px;
+}
+.my-wie{
+    width:180px;
+    height:180px;
+}
+.my-wia1{
+    width:610px;
+    height:372px;
+}
+.w-230{
+    width:230px;
+    height:150px;
+}

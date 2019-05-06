@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function Student(sname,sage){
+            this.sname=sname;
+            this.sage=sage;
+        }//prototype->{}
+        var lilei=new Student("Li Lei",11);
+      var hmm=new Student("Han Meimei",12);
+      console.log(lilei);
+      console.log(hmm);
+      console.log(lilei.toString());
+      console.log(hmm.toString());
+      //lieli和hmm的爷爷是不是同一个人
+      console.log(lilei.__proto__.__proto__==hmm.__proto__.__proto__);//true
+      //lilei的爷爷是不是object的老公
+      console.log(lilei.__proto__.__proto__==object.prototype);//true
+    </script>
+</body>
+</html>

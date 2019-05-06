@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           var father={
+         bal:100000000000,
+        car:"infiniti"
+      }
+     function Student(sname,sage){
+        this.sname=sname;
+        this.sage=sage;
+        }//prototype->{}
+        //设置妈妈的新老公为father
+        Student.prototype=father;
+        //new 出的两个孩子，自动继承新老公father
+        var lilei=new Student("Li Lei",18);
+      var hmm=new Student("Han Meimei",19);
+      console.log(lilei.bal,lilei.car);
+      console.log(hmm.bal,hmm.car);
+    </script>
+</body>
+</html>

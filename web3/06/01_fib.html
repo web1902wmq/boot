@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 1 2 3 5 8 13 21 34 55
+        //n=1,2,3,4,5,6,7,8,9,10
+        //当n=1和n=2时，f(n)都返回1
+        //
+        //f(n)=f(n-1)+f(n-2)
+        function fib(n){
+            //
+            //arguments.callee=fib;
+            if(n<3){
+                return 1;
+            }else{
+               return arguments.callee(n-1)+arguments.callee(n-2);
+            //   var f1=1,f2=1,fn;
+            //   for(var i=3;i<=n;i++){
+            //       fn=f1+f2;//f1+f2=fn;
+            //       //为下轮做准备
+            //       f1=f2;//f2给f1
+            //       f2=fn;//fn给f2
+             // }
+           // return fn;
+            }
+        }
+        console.log(fib(100));
+    </script>
+</body>
+</html>

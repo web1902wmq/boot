@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //定义计算器函数 ，要求传入员工姓名和员工不确定个数的薪资的和
+        //function calc(ename/*...*/){
+           // var  sum=0;
+          // for(var i=0;i<arguments.length;i++){
+           //     sum+=arguments[i];
+          //  }
+        //两个问题：1.reduce从0位置开始汇总
+        //         2.reduce不是数组，永不了reduce
+       // var sum=arguments.reduce(
+        //    (prev,elem)=>perv+elem
+        //);
+        //console.log(`${ename}的总工资是${sum}`)
+       // }
+       //1.在形参列表中用"...z数组名"，可以收集剩余的参数
+       function calc(eanme,...arr){
+           //数组arr可收集除ename之外剩余的参数值
+           var sum=arr.reduce(
+           (prev,elem)=>perv+elem/*,0*/
+           )
+           console.log(`${ename}的总工资是${sum}`)
+       }
+       calc("Li lei",10000,2000,3000);
+                    //...arr[10000,2000,3000]
+       calc("Han Meimei",5000,1000,2000,3000);
+                    //...arr[5000,1000,2000,3000]
+    </script>
+</body>
+</html>

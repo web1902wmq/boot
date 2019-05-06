@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1=[1,2,3,4,5];
+        var arr2=[2,4,6,4,2];
+        //判断哪个数组是偶数
+        console.log(
+            arr1.every(function(elem){
+                return elem%2==0;
+            }),//false
+            arr2.every(function(elem){
+                return elem%2==0;
+            })//true
+        );
+        //判断哪个数组是升序
+        //判断每个元素都小于等于 下一个
+        console.log(
+            arr1.every(
+                //回调函数会被，every自动拿到每个元素上执行一次
+                function(elem,i,arr){
+                    //elem:自动收到当前 正在遍历到的元素值
+                    //i:当前正在遍历的位置
+                    //arr:当前数组对象
+                    //如果当前元素<=当前数组的下一个位置
+                    return i<arr.length-1?elem<=arr[i+1]:true//判断条件 
+                    //如果i没有到最后一个元素。就按规矩比较，如果已经到最后一个元素就不比较直接返回true
+
+                }
+            ),//true
+            arr2.every(
+                function(elem,i,arr){
+                    return i<arr.length-1?elem<=arr[i+1]:true
+                }
+            )//fales
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //在arr中查找指定元素出现的位置
+    //如果不给第三个参数，默认从0位置开始找
+    //如果给第三个参数，则从给定的位置向后找
+   /* function find(arr,elem.starti){
+        //方法一：if判断
+        if(starti===undefined){
+            starti=0
+        }
+    }*/
+    //方法二：短路
+    //starti=starti || 0;//0是starti的备胎
+    // ||会自动将前后转为booleaen
+    //如果starti转换后不是false,就首选starti使用，如果starti转换后是false,就用0替换starti
+    //console.log(`在arr中，从${starti}位置开始，找下一个${elem}的位置。。。`)
+    //方法三：es6默认值
+    function find(arr,elem,starti=0){
+        //如果没有给starti传参，则自动 用0代替
+        console.log(`在arr中，从${starti}位置开始，找下一个${elem}的位置...`)
+    }
+    var arr=[];
+    find(arr,3);//从0 开始
+    find(arr,3,5);//从5的位置开始找
+    </script>
+</body>
+</html>

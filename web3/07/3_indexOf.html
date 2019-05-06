@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,3,2,1];
+               //0 1 2 3 4 5 6
+               //var i=arr.indexOf(要找的元素，[开始的位置])
+               console.log(
+                   //在arr中找第一个3的位置
+                   arr.indexOf(3),//2
+                   //在arr中从3的位置开始找下一个3的位置
+                   arr.indexOf(3,3),//4
+                   //在arr中从5的位置开始找下一个3的位置
+                   arr.indexOf(3,5),//-1
+                    //在arr中找第一个5的位置
+                   arr.indexOf(5),//-1
+               );
+    </script>
+</body>
+</html>

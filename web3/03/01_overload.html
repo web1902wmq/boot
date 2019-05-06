@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pay(){
+            //arguments:[].lenght
+            //如果用户没有传入实参，就手机支付
+            if(arguments.length==0){
+                console.log(`手机支付....`);
+            }//否则如果用户传入一个实参，就现金支付
+            else if(arguments.length==1){
+                console.log(`现金结账：收您 ${arguments[0]}`)   
+            }else{//否则就刷卡支付
+                console.log(`刷卡支付：从您卡号 ${arguments[0]}扣款成功`)
+            }
+        }
+        pay();//手机支付
+        pay(100);//现金支付，收您100
+        pay("6553 1234","123456");//刷卡支付
+    </script>
+</body>
+</html>
+

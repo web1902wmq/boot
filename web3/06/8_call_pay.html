@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calc(base,bonus1,bonus2){
+        console.log(`${this.ename} 的总工资是:${base+bonus1+bonus2}`)
+    }
+        var lilei={ ename:"Li Lei" };
+        var hmm={ ename:"Han Meimei" };
+        //lilei.calc(10000,2000,3000);//报错
+        //calc(10000,2000,3000);
+        //this->window
+
+        //用lilei调用calc方法
+        calc.call(lilei,10000,2000,3000);
+        //this->lilei
+        //Li Lei的总工资是15000
+        //用hmm调用calc方法
+        calc.call(hmm,10000,1000,2000);
+        //this->hmm
+        //Han Meimei的总工资是13000
+    </script>
+</body>
+</html>

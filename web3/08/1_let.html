@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* var  a;//undefined
+        console.log(a);//undefined
+        var a=10;
+        console.log(a);*/
+
+        /*console.log(a);//报错
+        let a=10;//阻止声明提前
+        console.log(a);*/
+
+       /* let a=5;
+        console.log(a);
+        let a=10;//报错 a已经被声明；let a 不能重复声明
+        console.log(a);*/
+
+       /* var t=0;
+        function add(){
+            t+=10;
+        }
+        add();
+        console.log(t);//10*/
+
+       /* var t=0;
+        function add(){
+            var t;//undefined
+            t+=10;//因为有了局部t，无法修改全局
+            var err=false;
+            if (err){//判断条件不成立，所以不执行
+            //if（）{//不是作用域拦不住 var t 被提前
+            var t=new Date();
+            t.toLocaleString();
+            }    
+        }
+        add();
+        console.log(t);//0*/
+
+        var t=0;
+        function add(){
+            t+=10;//依然修改全局t
+            var err=false;
+            if (err){//判断条件不成立，所以不执行
+            //let 让if（）{//也变成了块级作用域，可以阻止t被被声明提前
+            let t=new Date();
+            t.toLocaleString();
+            }    
+        }
+        add();
+        console.log(t);//10
+    </script>
+</body>
+</html>

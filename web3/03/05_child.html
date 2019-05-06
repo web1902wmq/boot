@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parent(){
+            var total=1000;
+            //用外层函数返回内层函数对象
+            return function(x){
+                total-=x; 
+                console.log(`花了${x},还剩${total}`);
+            }
+        }
+        //3.使用者调用外层函数parent，获得内层函数对象
+        var child=parent();
+        console.dir(child);//输出一个对象在内存中的存储结构
+        /*child:return function(x){(total=1000)
+                total-=x; 
+                console.log(`花了${x},还剩${total}`);
+        }*/
+            child(100);//花了100.还剩900
+            total=0;//外人想篡改闭包中的total;
+            child(100);//花了100.还剩800
+            child(100);//花了100.还剩700
+            //闭包缺点：比普通的函数占用更多的内存空间，
+            //解决：child=null;
+    </script>
+</body>
+</html>

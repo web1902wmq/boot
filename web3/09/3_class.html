@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //定义一个学生类型
+//每个学生都有学生姓名、学生年龄两个属性
+//每个学生都能做自我介绍
+function Student(sname,sage){
+  this.sname=sname;
+  this.sage=sage;
+}
+Student.prototype.intr=function(){
+  console.log(`I'm ${this.sname}, I'm ${this.sage}`);
+}
+
+
+
+var lilei=new Student("Li Lei",11);
+var hmm=new Student("Han Meimei",12);
+lilei.intr();
+hmm.intr();
+console.log(lilei);
+console.log(hmm);
+        */
+        //定义一个学生类型
+        //每个学生都有学生姓名、学生年龄两个属性
+      //每个学生都能做自我介绍 
+      class Student{
+    constructor(sname,sage){
+        this.sname=sname;
+        this.sage=sage;
+    }
+    intr(){
+     console.log(`I'm ${this.sname}, I'm ${this.sage}`);
+    }
+}
+
+
+    var lilei=new Student("Li Lei",11);
+    var hmm=new Student("Han Meimei",12);
+    lilei.intr();
+    hmm.intr();
+    console.log(lilei);
+    console.log(hmm);   
+</script>
+</body>
+</html>

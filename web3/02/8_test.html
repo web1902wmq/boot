@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //请用户输入密码
+        var pwd=prompt("请输入密码");
+        var reg=/^\d{6}$/; //定义规则：6为数字
+        //如果（用）规则验正用户输入的密码。通过
+        if(reg.test(pwd)==true){
+          //在页面上显示，验证通过
+          document.write(`<h1 style="color:green">验证通过</h1>`)
+        }else{//否则，提示密码格式不正确
+            alert("密码格式不正确");
+        }  //
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names=["亮亮","然然","东东","涛涛","磊磊"];
+       /*for(var i=0;i<names.lenght;i++){
+           alert(names[i]+"- 到 ！");
+       }
+      
+        //对(names)每个元素,执行回调函数
+        //names,forEach(
+        //回调函数会在每个元素上执行一次
+            function(elem,i,arr){
+                //elem:自动收到当前 正在遍历到的元素值
+                //i:当前正在遍历的位置
+                //arr:当前数组对象
+               alert(elem+"- 到 ！");
+            }
+        )*/
+        //names.function(elem=>alert(elem));
+        var nums=[1,2,3,4,5];
+        /*for(var i=0;i<nums.lenght;i++){
+           nums[i]*=2;
+       }*/
+       //对(nums数组)中每个严肃执行一次回调函数
+       names.forEach(function(elem,i,arr){
+              //对当前元素值乘2
+             // elem*=2;//按值传递---赵氏孤儿
+             arr[i]*=2;//arr[i]=arr[i]*2
+             //arr[i]=elem*2
+            })
+            console.log(nums);//2,4,6,8,10
+            //元素都是引用类型的对象
+            var objs=[{x:1},{x:2},{x:3},{x:4},{x:5}];
+            objs.forEach(function(elem){
+                elem.x*=2;
+            })
+            console.log(objs);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var class1=[1,3,5,7,9];
+        var result=class1.reduce(
+            function(prev,elem){
+                return prev+elem;//将当前值汇总到临时汇总值
+            },
+            //0//从0累加
+        );
+        var class2=[2,4,6,8,10];
+         result=class2.reduce(
+           (prev,elem)=>prev+elem,
+             result//从上一个班捐的总数继续开始累加
+        );
+        console.log(result);//25+30=50
+    </script>
+</body>
+</html>

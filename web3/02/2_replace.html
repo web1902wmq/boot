@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var str="老师:请用小红 我的 朋友造句。小亮：小红是我的朋友。小然：朋友！小红是我的！";
+      //str="no zuo no die;no can no bibi";
+      var reg=/小[\u4e00-\u9fa5]/g
+      //查找字符串以小开头的人名
+      var arr=str.match(reg);
+      //将字符串中所有“小”字开头的人名都换成两颗**
+      str=str.replace(reg,"**");
+      //null
+      console.log(str);
+      //如果找到敏感词，返回敏感词的个数，否则，返回0个
+      console.log(`共替换 ${arr!==null?arr.length:0} 处`);
+    </script>
+</body>
+</html>

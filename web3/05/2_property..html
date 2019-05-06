@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             function Student(sname,sage){
+            this.sname=sname;
+            this.sage=sage;
+        }//prototype->{}
+        //为妈妈的老公强行添加一个intr方法
+        Student.prototype.className="初一二班";
+       Student.prototype.intr=function(){
+                console.log(`I'm ${this.sname},I'm ${this.sage}`);
+            }
+     var lilei=new Student("Li Lei",11);
+      var hmm=new Student("Han Meimei",12);
+      console.log(lilei);
+      console.log(hmm);
+     console.log(lilei.className);
+     console.log(hmm.className);
+     lilei.sage++;//李磊试图修改自己的自由属性
+     console.log(lilei.sage);
+     console.log(hmm.sage);//不影响hmm
+     //过了一年，全班同学统一升一年级
+     //李磊试图修改全班的className
+     //lilei.className="初二二班";//错误的做法
+     //结果：仅李磊多出一个自有的className从此再也不使用原型对象中，公有的className,与全班其他同学，分道扬镳
+     //又过了一年，全班同学统一升初三二年级
+     //只要修改共有属性的值，必须用原型对象本身亲自修改
+     Student.prototype.className="初三二班"
+     console.log(lilei.className);
+     console.log(hmm.className);
+    </script>
+</body>
+</html>

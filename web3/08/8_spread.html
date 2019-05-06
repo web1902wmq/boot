@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //让max和min也支持在数组中查找最大值和最小值
+        var nums=[3,7,2,4];
+        console.log(Math.max(nums))//max不支持数组
+        //传统：
+        console.log(Math.max.apply(null,nums));
+        console.log(Math.max.apply(Math,nums));
+        console.log(Math.max.apply(nums,nums));
+        //ES6
+        console.log(Math.max(...nums));
+                        //    拆
+    </script>
+</body> 
+</html>

@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <style>
+	 *{margin:0;padding:0;box-sizing:border-box;}
+	 body{
+	   background-color:#f5f6fa;
+	 }
+	 .logo{
+	  float:left;
+	 }
+	  .a1_box{
+		 width:100%;
+		 background:#ffffff;
+		 		 position:relative;
+		}
+		#a1{
+		  width:1200px;
+			height:70px;
+		 margin:0 auto;
+     }
+		  #a1::after{
+		   content:"";
+			 display:block;
+			 clear:both;
+		 }
+		 .logo{
+		  float:left;
+			height:70px;
+		 }
+		 .logo>img{
+		  height:47px;
+			margin-top:11.5px;
+		 }
+		 	 #d1{
+		float:left;
+		width:800px;
+		height:70px;
+		line-height:70px;
+	 }
+	  #d1>ul{
+		width:100%;
+		display:flex;
+		list-style:none;
+		justify-content:space-around;
+		text-align:center;
+	 }
+	  #d3{
+		float:right;
+		height:70px;
+		line-height:70px;
+		margin-top:-75px;
+		margin-right:100px;
+	 }
+	  #d3>div{
+		float:left;
+	 }
+	 #d3>div:nth-child(1){
+		margin-top:13px;
+		margin-right:20px;
+	 }
+		
+	
+		.q1{
+		 width:1200px;
+		 height:600;
+		 background:rgb(255,255,255);
+   
+		}
+		#d2{
+		 width:400px;
+		 height:490px;
+		 border:1px solid #ffffff;
+		 text-align:center;
+		  position:absolute;
+    top:140px;left:600px;
+
+		}
+
+	  #header{
+		 width:324px;
+		 height:40px;
+		 position:relative;
+		 margin:36px;
+	   border-bottom:1px solid #ddd;
+		 float:left;
+	
+		}
+		#header>a{
+
+		  text-decoration:none;
+		 border-bottom:2px solid #000;
+		  padding:0px;
+			position:absolute;
+			top:18px;left:0px;
+		}
+		#header>img{
+		position:absolute;
+		 top:0px;left:287px;
+		}
+    .d22>input{
+		 width:320px;
+		 height:40px;
+	   text-decoration:none;
+		 box-sizing:border-box;
+		 padding:10px 0;
+		 margin:10px 0;
+		 padding-left:10px;
+
+		}
+		.d23{
+		 width:320px;
+		 height:40px;
+		 margin:auto;
+		}
+    .d23>input{
+		width:80px;
+		height:40px;
+		box-sizing:border-box;
+		float:left;
+    padding-left:10px;
+		margin-right:10px;
+		}
+		.d5{
+		 width:100px;
+		 height:38px;
+	
+		}
+		.d6{
+		 background-image:linear-gradient(to bottom,#27b0f6 0%,#0aa1ed 100%) ;
+		 border:0;
+		 color:#fff;
+		 text-align:center;
+
+		}
+		#footer{
+		  width:340px;
+	
+		 font-size:9px;
+		 margin:auto;
+		 box-sizing:border-box;
+      position:relative;
+		 }
+		 #footer>p>a{
+		   text-decoration:none;
+		 }
+		.d7{
+		 width:16px;
+		 height:16px;
+		 position:absolute;
+		 top:1px; left:0;
+		}
+	  .d8{
+		 
+		 height:16px;
+		 float:left;
+		 margin-left:21px;
+		}
+		.d8>a{
+		 
+		 height:16px;
+		}
+		.d9{
+		 
+		 height:18px;
+		 float:left;
+		}
+		.d9>a{
+		 
+		 height:16px;
+		}
+		.footer_box{
+		width:100%;
+		height:240px;
+		background:#282c30;
+		position:absolute;
+		top:765px;
+	
+	 }
+	.all_box{
+		width:1200px;
+		margin: 0 auto;
+		padding-top:66px;
+		padding-bottom:30px;
+		border-bottom:1px solid #3d3e3f;
+	}
+	.all_box::after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.msg_box{
+		float:left;
+	}
+	.msg_items{
+		list-style:none;
+		width:400px;
+		padding-bottom:15px;
+		display:flex;
+		justify-content:space-between;
+		color:#999;
+	}
+	.msg_items>li{
+		width:100px;
+		height:16px;
+		line-height:16px;
+		font-size:16px;
+		text-align:center;
+
+	}
+	.msg_items>li:not(:last-child){
+		border-right:1px solid #999;
+	}
+	.msg_text{
+		color:#666;
+	}
+	.erwei_box{
+		float:right;
+		color:#666;
+	}
+	.erwei_box:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.fl{
+		float:left;
+	}
+	.erwei_img>img{width:75px;margin-top:-20px;margin-left:10px;}
+	</style>
+
+</head>
+<body>
+	<div class="body-box">
+	 <div id="a1_box">
+	 <div id="a1">
+	  <div class="logo">
+		  	<img src="play-logo-ccj.png" alt="">
+		</div>
+		<div id="d1">
+	  <ul>
+		  <li>首页</li>
+		  <li>免费课</li>
+		  <li>直播课</li>
+		  <li>会员课</li>
+		  <li>培优课</li>
+		  <li>线上班（VIP）</li>
+		  <li>线下班</li>
+		  <li>最新活动</li>
+		</ul>
+		</div>
+		</div>
+		<div id="d3">
+		 <div>
+		  <img src="search.png" alt="">
+		 </div>
+		 <div>
+		     <a>登录</a>
+					<span>|</span>
+					<a>注册</a>
+		 </div>
+	 </div>
+	 </div>
+	 <div class="q1">
+	  <div id="d2">
+	   <div id="header">
+	    <a href="#">手机注册</a>
+			<img src="img2018040401_ll.png" alt="">		
+		 </div>
+		 <div class="d22">
+		   <input type="text" placeholder="手机号" onblur="phone_blur()" onfocus="phone_focus()" id="phone">
+		   <p id="p1"></p>
+		   <input type="text" placeholder="密码" onblur="upwd_blur()" onfocus="upwd_focus()" id="upwd">
+		   <p id="p2"></p>
+		   <input type="text" placeholder="确认密码" onblur="dupwd_blur()" onfocus="dupwd_focus()" id="dupwd">
+		   <p id="p3"></p>
+      <div class="d23">
+		   <input type="text" placeholder="验证码" >
+			 <input type="text" id="o1" >
+			 <button class="d5">看不清楚?换一张</button>
+			</div>
+		   <input type="button" onclick="ureg()" value="注册" class="d6">
+		   <div id="footer">
+		   <input type="checkbox" class="d7">
+			 <p class="d8">我已阅读并同意
+			 <a href="#">&nbsp&lt&lt用户注册协议&gt&gt</a></p>
+			<p class="d9">&nbsp&nbsp已有账号?&nbsp<a href="login.html">立即登录</a></p>
+
+		  </div>
+		 </div>
+    </div>
+	 </div>
+	  <footer class="footer_box">
+			<div class="all_box">
+				<div class="msg_box">
+					<ul class="msg_items">
+						<li>关于我们</li>					
+						<li>招聘信息</li>
+						<li>联系我们</li>
+						<li>商务合作</li>
+					</ul>
+					<p class="msg_text">Copyright © 达内科技有限公司版权所有 京ICP备12003709号-2</p>
+				</div>
+				<div class="erwei_box">
+					<div class="erwei_msg fl">
+						<p>达内精品在线WWW.TMOOC.CN 专注于IT职业技能培训 </p>
+						<p>涵盖20余门课程体系，致力于打造最权威的IT职业教育学习平台</p>
+					</div>
+					<div class="erwei_img fl">
+						<img src="erweima.jpg">
+					</div>
+				</div>
+			<div>
+			
+	  </footer>
+	</div>
+      
+
+
+	
+
+	
+</body>
+
+<script>
+
+       function phone_blur(){
+		  var reg = /^1[3578]\d{9}$/;
+	     if(!phone.value){
+		    p1.innerHTML=("手机号不能为空")
+		 }else if(!reg.test(phone.value)){
+			p1.innerHTML = "手机格式不正确！"
+		 }else{
+			p1.innerHTML = "成功！"
+		 }
+	   }
+	   function phone_focus(){
+	     p1.innerHTML="输入正确手机号"
+	   }
+      function upwd_blur(){
+		  var reg=/^([a-zA-Z0-9]){6,18}/
+	   if(!upwd.value){
+			p2.innerHTML=("密码不能为空")
+	   }else if(!reg.test(upwd.value)){
+			p2.innerHTML=("密码格式不正确")
+	   }else{
+			p2.innerHTML = "通过"
+	   }
+	  }
+	  function upwd_focus(){
+	     p2.innerHTML="输入正确，6~18位的含数字和字母的密码"
+	  }
+	  function dupwd_blur(){
+	    if(dupwd.value!=upwd.value){
+		  p3.innerHTML="密码不一致"
+		}else if(dupwd.value==""){
+		  p3.innerHTML="确认密码不能为空"
+		}else{
+		  p3.innerHTML="通过"
+		}
+	  }
+      function dupwd_focus(){
+	    p3.innerHTML="再一次确认密码"
+	  } 
+      
+	 //注册用户
+		 function ureg(){
+			 	//创建对象
+			 var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+			 if(xhr.readyState==4&&xhr.status==200){
+			  var result=xhr.responseText;
+          console.log(result);//路由要验证：p1.innerHTML=result;
+				}
+		  }
+		 xhr.open("post","/user/reg",true);
+		 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			 console.log(11);
+	   var formdata="phone="+phone.value+"&upwd="+upwd.value;
+		 xhr.send(formdata);
+		  console.log(12);
+	}			
+	</script>
+
+</html>

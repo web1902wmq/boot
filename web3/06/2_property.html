@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var eric={
+            eid:1001,//只读
+            ename:"埃里克",
+            salay:12000
+        }
+        //员工编号只读
+        //姓名禁止修改
+        //salay进制遍历
+       Object.defineProperties(eric,{
+           eid:{
+               writable:false,
+               configurable:false
+           },
+           ename:{
+               configurable:false
+           },
+           salay:{
+               enumerable:false,
+               configurable:false
+           }
+       })
+
+       // delete eric.ename;
+//  for(var key in eric){
+//            conaole.log(`${key}:${eric[key]}`);
+//        }      
+        //eric.eid=1002;
+        console.log(eric);
+    </script>
+</body>
+</html>

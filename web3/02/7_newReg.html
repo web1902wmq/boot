@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=["青天","白鹭"];
+        //Browser
+        //var reg=/arr.join("|")/;
+        var reg=new RegExp(arr.join("|"));
+        //请用户输入一条信息
+        var msg=prompt("输入信息内容");
+        //在消息中查找是否包含敏感词 
+        var i=msg.search(reg);
+        //如果包含，就提示包含敏感词，不能发送
+        if(1!==-1){alert("包含敏感词，不能发送!")}
+        //否则，将敏感词写到网页中
+        else{ document.write(`李然说:${msg}`);}
+    </script>
+</body>
+</html>

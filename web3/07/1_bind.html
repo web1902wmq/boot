@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body><script>
+        function calc(base,bonus1,bonus2){
+            console.log(`${this.ename} 的总工资是:${base+bonus1+bonus2}`)
+        }
+            var lilei={ ename:"Li Lei" };
+            var hmm={ ename:"Han Meimei" };
+            //lilei想买一个自己专属的计算器，能反复使用还能减少重复输入
+            var calc_l=calc.bind(lilei,10000);
+            //创建一个和calc函数一摸一样的新函数calc_l，并永久绑定其中this为lilei对象
+            //并永久绑定base为10000
+            //用李磊反复调用calc_l,而不用重复输入姓名和底薪
+            calc_l(10000,2000);
+            calc_l(2000,3000);
+          //hmm想抢李磊的计算器
+          calc_l.call(hmm,10000,2000,3000);
+            //this->lilei         |    |
+            //base->10000      bonus1  bonus2   
+        </script>
+</body>
+</html>

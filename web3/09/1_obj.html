@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //user.js
+       var signin=function(){
+                console.log("登录...");
+            }
+       var  signup=function(){
+                console.log("注册...");
+            }
+      var   signout=function(){
+                console.log("注销...");
+            }
+            //用一个对象结构，包裹所有成员
+            //用es6简写
+    var user={
+        //属性名：属性值
+        signin,signup,signout
+    }
+    //抛出整个对象模块
+    //module.exports=user;
+    //其他js中
+    //先引入对象模块
+    //var user=require(".../user.js");
+    //以对象形式使用
+    user.sibnin();
+    //也可在引入对象模块时，直接解构出需要的成员单独是使用
+    //var {signin,signup}=require(".../user.js")
+    //signin();
+    //signup();
+    </script>
+</body>
+</html>

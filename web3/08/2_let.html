@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(){
+        var arr=[];//let将for变为块级作用域之后,for内的变量在for外，不能使用。要想值用，必须定义在for外部。
+            //for(var i=0,arr=[];i<3;i++){
+                for(let i=0;i<3;i++){
+                arr[i]=function(){console.log(i)}
+                //(function(_i){
+                 //arr[_i]=function(){console.log(_i)}
+               // })(i)
+            }
+            return arr;
+        }
+        var funs=fun();
+        funs[0]();
+        funs[1]();
+        funs[2]();
+    </script>
+</body>
+</html>

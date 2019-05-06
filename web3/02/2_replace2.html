@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="you can you up";
+        //将每个单词的首字母替换为他的大写形式
+        str=str.replace(
+            /\b[a-z]/ig,
+            function(kw){//kw :y c y u
+                console.log(`回调函数自动被replace调用一次，传入参数kw:${kw},返回:${kw.toUpperCase()}`);
+                  /* 回调函数自动被replace调用一次，传入参数kw:y,返回:Y
+                :16 回调函数自动被replace调用一次，传入参数kw:c,返回:C
+                :16 回调函数自动被replace调用一次，传入参数kw:y,返回:Y
+                :16 回调函数自动被replace调用一次，传入参数kw:u,返回:U */ 
+                return kw.toUpperCase();
+            }//return Y C Y U
+        );
+        console.log(str);
+        //You Can You Up
+
+
+        var str1=[23,3,45,2];
+        //arr.sort();默认按字符串排列
+        //返回>0的数，就交换a和b的位置
+        str1=str1.sort(function(a,b){
+            console.log(`${a}-${b}=${a-b}`);
+            console.log(`${a-b>0?"交换":"不交换"}`);
+            return a-b
+        }
+        );
+        console.log(str1);
+
+    </script>
+</body>
+</html>
