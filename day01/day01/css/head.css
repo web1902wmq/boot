@@ -1,0 +1,31 @@
+*{margin:0;padding:0;}
+.my-img{
+    width:154px;
+    height:68px;
+}
+.my_age{
+    width:32px;
+    height:32px;
+}
+.my_hover:hover .my_hover1{
+    height:200px;
+    background:white;
+}
+.my_hover1{
+    height:0px;
+    overflow:hidden;
+}
+.my_hover1:hover .my_hover2{
+    height:100%;
+}
+.my_hover2{
+    height:0;
+    overflow:hidden;
+}
+.my_img1{
+    float:right;
+}
+
+.mybor{
+    border:1px solid #000;
+}

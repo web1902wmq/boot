@@ -1,0 +1,88 @@
+.my_header,.my_footer{
+    width:100%
+}
+/*手写媒体查询*/
+@media screen and (min-width:992px){
+    .my_header{
+        height:12rem;
+    }
+    .my_footer{
+        height:21rem;
+    }
+}
+@media screen and (max-width:991px){
+    .my_header{
+        height:37rem;
+    }
+    .my_footer{
+        height:37rem;
+    }
+}
+/*轮播左右箭头的样式*/
+.carousel-indicators li{
+    width:10px;
+    height:12px;
+    background-color:#fff;
+    margin-left:10px;
+    margin-right:10px;
+    border-radius:50%;
+}
+.carousel-indicators .active{
+    background-color:#0aa1ed;
+}
+.carousel-control-next,
+.carousel-control-prev{
+    width:4%;height:20%;
+    background-color:rgba(0,0,0,0.3);
+    top:40%;
+    border-radius:0.5rem;
+}
+.my_img2{
+    width:366px;
+    height:484px;
+}
+.my_img3{
+    width:180px;
+    height:242px;
+}
+.my_nav{
+    width:2300px;
+    height:486px;
+    list-style:none;
+    padding:0;
+    animation:move 10s linear infinite;
+}
+.my_nav_l{ width:366px;
+    height:484px;
+    float:left;
+}
+.my_neiro{
+    width:1096px;
+    height:486px;
+    margin:0 auto;
+    overflow:hidden;
+}
+@keyframes move{
+    0%{
+        transform:translate(0px);
+    }
+    100%{
+        transform:translate(-1096px);
+    }
+
+}
+.my-imga{
+    height:600px;
+}
+.my-imgb{
+    width:120px;
+    height:80px;
+}
+.my-w{
+    width:90px;
+    height:40px;
+}
+.my-h{
+    width:95px;
+    height:29px;
+}
